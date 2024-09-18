@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        body {
+            background-color: #e7e7e7;
+            font-family: Arial, sans-serif;
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-direction: row;
+            background-color: #fff;
+            width: 100%;
+            position: fixed;
+            height: 80px;
+        }
+        .nav-container div {
+            margin: 20px 60px;
+        }
+        .nav-container ul li {
+            list-style: none;
+        }
+        .nav-container ul li a {
+            font-weight: bold;
+            color: black;
+            font-size: 14px;
+            text-decoration: none;
+            padding-left: 40px;
+        }
+        .nav-container ul li a:hover {
+            cursor: pointer;
+            color: #3b9e02;
+        }
+        .nav-container img {
+            width: 80px;
+            color: black;
+            font-size: 2rem;
+            font-weight: bolder;
+        }
+        .nav-container #cta-btn-gtStd {
+            background-color: #f5740a;
+            color: #fff;
+            outline: none;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .nav-container #cta-btn-gtStd:hover {
+            cursor: pointer;
+            color: #fdfffc;
+            background-color: #2c491b;
+        }
+        .contact-section {
+            margin-top: 100px;
+            padding: 50px;
+            text-align: center;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .contact-section h1 {
+            color: #036fb8;
+            margin-bottom: 20px;
+        }
+        .contact-section p {
+            color: #555;
+            font-size: 1.2rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            max-width: 500px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            background-color: #036fb8;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .contact-form button:hover {
+            background-color: #024f8a;
+        }
+        footer {
+            background-color: rgb(22, 22, 22);
+            margin-top: 50px;
+            padding: 20px 0;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            color: #a09d9d;
+            padding: 60px 80px;
+        }
+        .footer-container #logo {
+            font-size: 24px;
+            font-weight: bolder;
+            color: #fff;
+        }
+        .footer-container h4 {
+            font-weight: lighter;
+            font-size: 12px;
+        }
+        .footer-container ul li {
+            list-style-type: none;
+        }
+        .footer-container ul li a {
+            text-decoration: none;
+            color: #a09d9d;
+            font-size: 12px;
+        }
+        .footer-container ul li a:hover {
+            color: #036fb8;
+        }
+        @media screen and (max-width: 767px) {
+            .nav-container {
+                display: inline-flex;
+                height: 50px;
+                width: 100%;
+            }
+            .nav-container ul li {
+                display: none;
+            }
+            .nav-container #logo {
+                font-size: 1rem;
+                padding: 15px 20px;
+            }
+            .nav-container #cta-btn-gtStd {
+                display: none;
+            }
+            .contact-section {
+                padding: 20px;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            .nav-container {
+                gap: 10px;
+            }
+            .nav-container #cta-btn-gtStd {
+                display: none;
+            }
+            .contact-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="nav-container">
+        <div>
+            <img src="https://via.placeholder.com/80" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div>
+            <button id="cta-btn-gtStd">Get Started</button>
+        </div>
+    </div>
+    <section class="contact-section" id="contact">
+        <h1>Contact Us</h1>
+        <p>If you have any questions, feel free to reach out to us by filling out the form below.</p>
+        <form class="contact-form">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <div id="logo">OurCompany</div>
+            <div>
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#team">Team</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact</h4>
+                <ul>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
